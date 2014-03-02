@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Hello Ajax version 1</title>
+<style type='text/css'>
+* { font-family: Tahoma, Arial, sans-serif; }
+#helloTitle{ color: #48f; font-size: 1.5em; }
+</style>
+<script type='text/javascript'
+src='js/jquery-1.11.0.js'> </script>
+<script type='text/javascript'>
+	window.onload=function() {
+		$('#helloBtn').onclick = function(){
+			var name = document.getElementById('helloTxt').value;
+			$('#helloTitle').load('hello1.jsp', 'name=' + encodeURI(name));
+			
+		};
+	};
+</script>
+</head>
+<body>
+	<h1 id='helloTitle'>Hello, stranger</h1>
+	<p>Please introduce yourself by entering
+	your name in the box below</p>
+	<input type='text' size='24' id='helloTxt'>
+	</input>&nbsp;
+	<button id='helloBtn'>Submit</button>
+</body>
+</html>
