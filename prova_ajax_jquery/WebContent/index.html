@@ -1,28 +1,24 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Hello Ajax version 1</title>
-<style type='text/css'>
-* { font-family: Tahoma, Arial, sans-serif; }
-#helloTitle{ color: #48f; font-size: 1.5em; }
-</style>
-<script type='text/javascript'
-src='js/jquery-1.11.0.js'> </script>
-<script type='text/javascript'>
-	window.onload=function() {
-		$('#helloBtn').on("click", function(){
-			var name = document.getElementById('helloTxt').value;
-			$('#helloTitle').load('hello1.jsp', 'name=' + encodeURI(name));
-			
-		});
-	};
-</script>
-</head>
+<link href="css/my_style.css" rel="stylesheet">
 <body>
-	<h1 id='helloTitle'>Hello, stranger</h1>
-	<p>Please introduce yourself by entering
-	your name in the box below</p>
-	<input type='text' size='24' id='helloTxt'>
-	</input>&nbsp;
-	<button id='helloBtn'>Submit</button>
-</body>
-</html>
+	<ul class="list">
+		<li>
+			<h1 class="helloTitle">Hello, stranger</h1>
+			<p>Please introduce yourself by entering your name in the box
+				below</p> <input type="text" size="24" class="helloTxt"> &nbsp;
+			<button class="helloBtn">Hide</button>
+		</li>
+		<li>
+			<h1 class="helloTitle">Hello, stranger</h1>
+			<p>Please introduce yourself by entering your name in the box
+				below</p> <input type="text" size="24" class="helloTxt"> &nbsp;
+			<button class="helloBtn">Hide</button>
+		</li>
+	</ul>
+	<!-- Javascript loading -->
+	<script type="text/javascript" src="js/jquery-1.11.0.js"> </script>
+	<script type="text/javascript" src="js/my_script.js"></script>
+
+</body></html>
